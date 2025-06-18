@@ -19,3 +19,12 @@ Zabbix est une solution de supervision robuste et complète, largement utilisée
 Ces limites expliquent en partie pourquoi Prometheus, avec son architecture orientée métriques temps réel, son stockage optimisé en base de données de séries temporelles (TSDB) et sa capacité à scruter (scrape) fréquemment les données, est devenue une solution très prisée dans le monde de la supervision moderne.  
 
 Nous allons donc découvrir dans la suite comment Prometheus aborde ces défis et améliore la gestion des métriques en environnement dynamique et à grande échelle.
+
+---
+
+Pour commencer rapidement avec Zabbix, vous pouvez cloner le dépôt contenant un fichier `docker-compose.yml` prêt à l'emploi et lancer l’ensemble des services avec la commande suivante :
+
+```bash
+git clone https://github.com/NadineAbedrabba/zabbix-monitoring.git
+cd zabbix-monitoring
+docker-compose up -d
