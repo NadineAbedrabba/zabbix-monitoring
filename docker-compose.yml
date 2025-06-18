@@ -1,0 +1,50 @@
+
+
+networks:
+  zabbix-net:
+
+services:
+  zabbix-db:
+    image: postgres:15
+    container_name: zabbix-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: zabbix
+      POSTGRES_PASSWORD: zabbix
+      POSTGRES_DB: zabbix
+    networks:
+      - zabbix-net
+
+  zabbix-server:
+    image: zabbix/zabbix-server-pgsql:alpine-latest
+    container_name: zabbix-server
+    restart: unless-stopped
+    depends_on:
+      - zabbix-db
+    environment:
+      DB_SERVER_HOST: zabbix-db
+      POSTGRES_USER: zabbix
+      POSTGRES_PASSWORD: zabbix
+      ZBX_SERVER_NAME: "Zabbix Server"
+    ports:
+      - "10051:10051"
+    networks:
+      - zabbix-net
+
+  zabbix-web:
+    image: zabbix/zabbix-web-nginx-pgsql:alpine-latest
+    container_name: zabbix-web
+    restart: unless-stopped
+    depends_on:
+      - zabbix-server
+      - zabbix-db
+    environment:
+      DB_SERVER_HOST: zabbix-db
+      POSTGRES_USER: zabbix
+      POSTGRES_PASSWORD: zabbix
+      ZBX_SERVER_HOST: zabbix-server
+      PHP_TZ: Africa/Tunis
+    ports:
+      - "8081:8080"
+    networks:
+      - zabbix-net
