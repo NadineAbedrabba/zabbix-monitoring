@@ -64,7 +64,7 @@ newgrp docker
 
 ---
 
-Pour commencer rapidement avec Zabbix, vous pouvez cloner le dépôt contenant un fichier `docker-compose.yml` prêt à l'emploi et lancer l’ensemble des services avec la commande suivante :
+## Pour commencer rapidement avec Zabbix, vous pouvez cloner le dépôt contenant un fichier `docker-compose.yml` prêt à l'emploi et lancer l’ensemble des services avec la commande suivante :
 
 ```bash
 git clone https://github.com/NadineAbedrabba/zabbix-monitoring.git
