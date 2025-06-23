@@ -61,6 +61,7 @@ docker-compose --version
 # (Optionnel) Ajouter votre utilisateur au groupe docker pour exécuter docker sans sudo
 sudo usermod -aG docker $USER
 newgrp docker
+
 ---
 
 Pour commencer rapidement avec Zabbix, vous pouvez cloner le dépôt contenant un fichier `docker-compose.yml` prêt à l'emploi et lancer l’ensemble des services avec la commande suivante :
