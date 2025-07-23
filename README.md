@@ -18,7 +18,6 @@ Zabbix est une solution de supervision robuste et complète, largement utilisée
 
 Ces limites expliquent en partie pourquoi Prometheus, avec son architecture orientée métriques temps réel, son stockage optimisé en base de données de séries temporelles (TSDB) et sa capacité à scruter (scrape) fréquemment les données, est devenue une solution très prisée dans le monde de la supervision moderne.  
 
-Nous allons donc découvrir dans la suite comment Prometheus aborde ces défis et améliore la gestion des métriques en environnement dynamique et à grande échelle.
 ---
 
 ## Prérequis et installation
