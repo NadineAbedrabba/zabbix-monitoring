@@ -69,3 +69,7 @@ newgrp docker
 git clone https://github.com/NadineAbedrabba/zabbix-monitoring.git
 cd zabbix-monitoring
 docker-compose up -d
+
+
+
+# Essayer le trigger Jenkins
